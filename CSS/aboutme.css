@@ -1,0 +1,106 @@
+body {
+    background-color:#F2F5EA;
+    font-family:"Roboto", sans-serif;
+    font-size: 18px;
+    color: #2C363F;
+    max-width: 1512px;
+    width:100%;
+}
+
+#logo {
+position: absolute;
+width: 174px;
+height: 70;
+top:5px;
+}
+
+.top {background-color:#BBC7A4;
+width: 1512px;
+height: 80px;
+}
+
+.menu {display:flex;
+    justify-content:right;
+}
+.menu >li{
+    list-style-type: none; margin: 1%; margin-right: 3%; padding: 1%; font-size: 20px; font-weight: 700; line-height: 23.44px;}
+.menu >li {
+    display:inline-block; position: relative;}
+a:link {
+    color: #2C363F; text-decoration:none;}
+a:visited {
+    color: #2C363F;}
+a:hover {
+    background-color: rgb(82, 163, 225);}
+a:active {
+    color:#2C363F;
+}
+#header {max-width: 1512px;
+    height: 540px;}
+
+    .object1 {display:flex;
+    justify-content: center;
+}
+
+h1 {line-height: 49.22px;
+    font-weight: 700;
+    font-size: 42px;
+    color:#E75A7C;
+    text-align: center;}
+
+h2 {font-size: 36px;
+    font-weight: 700;
+    line-height: 42.19px;
+    color:#E75A7C;
+    text-align: center;}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns:repeat(2, 1fr);
+    grid-row-gap: 2%;}
+
+.object2 {grid-row-start: 1;
+        grid-column-start: 2;
+        grid-row-end: 1;
+        grid-column-end: 2;
+    padding:5%;}
+
+    .textobject2 { 
+            color: black;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;}
+
+    .object3{
+        grid-area: 2/2/2/2;
+    padding: 5%;}
+
+        .textobject3 {
+        color: black;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;}
+
+        .pic1 {display: flex;
+            justify-content: center;
+            align-items: center;
+            /*grid-area: 1/1/2/1;
+        align-items: center;*/}
+
+        #portrait { 
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;}
+
+        .object4 {grid-area: 3/1/4/3;}
+
+        footer {
+            background-color: #BBC7A4;
+            color: #2C363F;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            padding: 2%;
+            text-align: center;
+        }

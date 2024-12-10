@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset=utf-8 />
+    <title>Min Bildbehandling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="CSS/index.css" />
+
+    <link rel="favicon" href="images/favicon.ico" type="image/ico"> 
+    <link rel="favicon" href="images/favicon.png" typ="image/png">
+
+    <style> /*Importerat typsnitt från Google-font*/
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+</head>
+<body>
+<header>
+    <a href="index.html"><img src="images/logo.svg" id="logo" alt="logga föreställande: vit stjärna med texten,: Tess, inuti på grön bakgrundsfärg" />
+        
+        <div class="menu.resp">
+            
+             <button class="menu-btn open" id="open-menu">
+                <span class="menu-icon">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </span>
+                <span class="menu-text">MENY</span>
+            </button>
+            
+            <nav id="nav-menu">
+                
+                <button class="menu-btn close" id="close-menu">
+                    <span class="menu-icon">
+                        <span class="bars cross1"></span>
+                        <span class="bars cross2"></span>
+                    </span>
+                    <span class="menu-text">STÄNG</span>
+                </button>
+                <ul>
+        <li><a href="index.html">STARTSIDA</a></li>
+        <li><a href="aboutme.html">OM MIG</a></li>
+        <li><a href="pictures.html">BILDBEHANDLING</a></li>
+       </ul>
+         </nav>
+         <script>
+            let openBtn = document.getElementById("open-menu");
+            let closeBtn = document.getElementById("close-menu");
+            
+            openBtn.addEventListener('click', toggleMenu);
+            closeBtn.addEventListener('click', toggleMenu);
+            
+            function toggleMenu() {
+                let navMenuEl = document.getElementById("nav-menu");
+            
+                let style = window.getComputedStyle(navMenuEl);
+            
+                if(style.display === "none") {
+                    navMenuEl.style.display = "block";
+                } else {
+                    navMenuEl.style.display = "none";
+                }
+            }
+        </script>
+
+        </div>
+    </header>
+ 
+
+    <div class="pic.header">
+    <img src="images/header.jpg" alt="två svarta läroböcker" id="header"/>
+    </div>
+
+        <div class="grid-container">
+
+        <div class="object1">
+        <h1><b>Senaste produkterna</b></h1>
+</div>
+<div class="pic1">
+<img src="images/frilaggning01.png" alt="blå penna med skuggning" id="pic1"/>
+</div>
+<div class="pic2">
+<img src="images/frilaggning02.png" alt="lila penna med skuggning" id="pic2"/>
+</div>
+<div class="pic3">
+<img src="images/frilaggning03.png" alt="rosa penna med skuggning" id="pic3"/>
+</div>
+
+<div class="backgroundimage" id="ground">
+    <div class="backgroundtext">
+        <p>Webbutvecklingsprogrammet
+            <br>
+            Mittuniversitetet
+        </p>
+        <button class="button" id="click.button" type="submit">Sök här</button>
+    </div>
+</div>
+<script>
+document.getElementById("click.button").addEventListener("click", function(){
+    window.location.href="https://www.miun.se/";
+});
+</script>
+
+<div class="pic4">
+<img src="images/reklam_banner.gif" alt="tre pennor med färgerna blå, rosa och lila" id="pic4"/>
+</div>
+
+<div class="object2">
+        <footer> Laborationsuppgift för kursen DT200G, Grafisk design för webb.
+            <br>
+            © Copyright Therese Nevander, 2024.
+        </footer>
+        </div>
+        </div>
+    </body>
+    </html>
