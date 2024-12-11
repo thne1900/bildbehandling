@@ -1,11 +1,12 @@
-body {background-color:#F2F5EA;
+body {/*Sets properties on the body, with background color, font-family, line height and width.*/
+    background-color:#F2F5EA;
     font-family:"Roboto", sans-serif;
     color: #2C363F;
     line-height: 1.5em;
     max-width: 1512px;
-   width:100%;}
+    width:100%;}
 
-#logo {
+#logo {/*sets style around the website's logo, with position, placement and padding.*/
 position:absolute;
 width: 174px;
 height: 70px;
@@ -13,13 +14,14 @@ top:5px;
 left: 156px;
 padding:1%;}
 
-h1 {
-font-weight: 700;
-line-height: 49.22px;
-font-size: 42px;
-color:#E75A7C;}
+#header {/*Header has been given width and height*/
+    max-width:1512px;
+    width:100%;
+    height: auto;
+    max-height: 540px;}
 
-header {background-color:#BBC7A4;
+header {/*the header element has been given color, sizes, placement, margin and padding.*/
+    background-color:#BBC7A4;
     max-width: 1512px;
     height: 80px;
     box-shadow:0px 4px 4px 0px rgba(0,0,0,1);
@@ -30,7 +32,8 @@ header {background-color:#BBC7A4;
     justify-content: space-between;
     align-items: center;}
 
-nav { background-color: #BBC7A4;
+nav { /*the nav element has been given color, sizes of text, width and height and line-height as well as how it should be displayed.*/
+    background-color: #BBC7A4;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
     font-weight: 700;
     font-size: 20px;
@@ -39,117 +42,153 @@ nav { background-color: #BBC7A4;
     top: 0;
     height: 100vh;
     width: 250px;
-    display: none;}
+    display: none;
+    line-height: 23.44px;}
 
-    nav ul {width: 100%;
+    nav ul {/*The nav element's unsorted list has been styled in sizes, placement, margin and padding, line-height.*/
+        width: 100%;
         list-style-type: none;
         text-align: center;
         margin: 0 auto;
-        padding: 0;}
+        padding: 0;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;}
 
-    nav li {padding: 0.8em 0;
+    nav li {/*The nav element's object has been sized and padded.*/
+        padding: 0.8em 0;
         width: 100%;}
     
-    nav a {color: black;
+    nav a {/*The links of the nav element have been given color, design and padding.*/
+        color: black;
         text-decoration: none;
         padding: 0 1em;}
     
-    nav li:hover {background-color: rgb(83, 135, 191);
+    nav li:hover {/*nav element links hover, get background color and a "pointing finger".*/
+        background-color: rgb(83, 135, 191);
         cursor: pointer;}
 
-    .menu.btn {display: flex;
+    .menu.btn {/*the menu button gets placement, padding, background color, frame, a "pointing finger" and sizes.*/
+        display: flex;
         align-items: center;
         padding: 8px 15px;
         background-color: #BBC7A4;
-        border: black solid 2px;
-        cursor: pointer;}
+        border: black solid 4px;
+        cursor: pointer;
+        width:120px;
+        height:43px;
+    }
     
-    .open { margin: 0 1em;}
+    .open {/*the open button has been given margin.*/
+        margin: 0 1em;}
     
-    .menu-btn:hover {background-color:#BBC7A4 ;
+    .menu-btn:hover {/*menu button on hover gets background color and shadow.*/
+        background-color:#BBC7A4 ;
         box-shadow: 0 0px 2px rgba(0, 0, 0, 0.421);}
     
-    .menu-icon {margin-right: 5px;}
+    .menu-icon {margin-right: 5px;}/*the menu icon gets the right margin.*/
     
-    .bars {display: block;
+    .bars {/*The lines in the menu get design, size, background color and margin.*/
+        display: block;
         width: 20px;
         height: 3px;
         background-color:black;
-        margin: 5px 0;
-    }
+        margin: 5px 0;}
     
-    .menu-text {font-size: 1.2em;
-        color: black;
-        }
+    .menu-text {/*the menu text has been given size, design, line height and color.*/
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 26.95px;
+        color: black;}
     
-    .close { margin: 1em 1.5em;
+    .close {/*the button to close has been given margin and padding.*/ 
+        margin: 1em 1.5em;
         padding: 10px 15px;}
     
-    .cross1 {width: 25px;
+    .cross1 {/*the cross on the close button gets size, design, position and placement.*/
+        width: 25px;
         transform: rotate(45deg);
         position: relative;
         top: 5px;}
     
-    .cross2 {width: 25px;
+    .cross2 {/*the cross on the close button gets size, design, position and placement.*/
+        width: 25px;
         transform: rotate(135deg);
         position: relative;
         top: -3px;}
+
+        h1 {/*Sets the style of the Header, with text size, color and line height.*/
+            font-weight: 700;
+            line-height: 49.22px;
+            font-size: 42px;
+            color:#E75A7C;}
     
-#header {max-width:1512px;
-    width:100%;
-    height: 540px;
-}
-.grid-container {
+.grid-container {/*Design of a grid container for placements around rows and columns.*/
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns:repeat(3, 1fr);
-}
+    grid-template-columns:repeat(3, 1fr);}
 
-.object1 {grid-row-start: 1;
+.object1 {/*object1 gets a placement with grid*/
+    grid-row-start: 1;
     grid-column-start: 2;
     grid-row-end: 2;
     grid-column-end: 2;
-    text-align: center;
+    text-align: center;}
+
+.pic1{/*pic1 gets a placement with grid area.*/
+    grid-area:2/2/3/2;
+    display: flex;
+    justify-content: left;
+    align-items: center;}
+
+.pic2{/*pic2 gets a placement with grid area.*/
+    grid-area:2/2/3/2;
+    display:flex;
+    justify-content: center;
+    align-items: center;}
+
+.pic3{/*pic3 gets a placement with grid area.*/
+    grid-area:2/2/3/2;
+    display: flex;
+    justify-content: right;
+    align-items: center;}
+
+#pic1{/*image 1 gets width and height*/
+max-width: 300px;
+width:100%;
 }
 
-.pic1{grid-area:2/1/3/1;
-justify-items: center;
-align-items: center;}
-
-.pic2{grid-area:2/2/3/2;
-    justify-items: center;
-    align-items: center;
-}
-.pic3{grid-area:2/3/3/3;
-    justify-items: center;
-    align-items: center;
+#pic2{/*image 2 gets width and height*/
+max-width:300px;
+width:100%;
 }
 
-#pic1{width: 300px;
-height: 300px;}
-#pic2{width: 300px;
-height: 300px;}
-#pic3 {width:300px;
-height: 300px;}
+#pic3 {/*image 3 gets width and height*/
+max-width:300px;
+width:100%;
+}
 
-.backgroundimage {grid-area: 3/1/4/5;
+.backgroundimage {/*The background image gets location, background color and size.*/
+    grid-area: 3/1/4/4;
     background-color: rgba(187,199,164, 1);
     background-image: url("background.jpg");
     background-size: cover;
     background-position: center;
     max-width: 1512px;
+    width:100%;
     height: 594px;
-}
+    }
 
-.backgroundtext {font-weight: 700;
+.backgroundtext {/*the text on the background image gets size, color and shadow.*/
+    font-weight: 700;
     font-size: 42px;
     line-height: 70px;
     text-align: center;
     color:white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);}
 
-.button {width:238px;
+.button {/*The button on the background image is designed in terms of size, color, text, border and shadow.*/
+width:238px;
 height:70px;
 font-weight: 700;
 font-size: 42px;
@@ -159,20 +198,24 @@ color:white;
 border: 4px solid white;
 border-color: white;
 background-color: transparent;
-text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-text-align: center;
-}
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5);}
 
-.button:hover {background-color:#BBC7A4;}
+.button:hover {background-color:#BBC7A4;} /*On hover, the button gets a background color.*/
 
-.pic4 {grid-area: 4/2/5/2;}
-#pic4 {width:650px;
-height: 430px;}
+.pic4 {/*pic4 gets a placement with grid area and flex.*/
+grid-area: 4/2/5/2;
+display:flex;
+justify-content: center;
+align-items: center;}
 
-.object2 {
+#pic4 {/*Image 4 gets height and width.*/
+width:650px;
+height:430px;}
+
+.object2 {/*object2 gets a location with grid area.*/
     grid-area: 5/1/6/4;}
 
-footer {
+footer {/*the footer gets color, size of text, position, line height and padding.*/
     background-color: #BBC7A4;
     color: #2C363F;
     font-weight: 400;
@@ -182,8 +225,8 @@ footer {
     text-align: center;}
 
 
-    @media only screen and (min-width: 757px) {
-        
+    @media only screen and (min-width: 757px){/*Media rule, where the screen size of 757px controls what should be shown or not.*/
+
         .menu-btn {display: none;}
         #open-menu {display: none !important;}
         header {position: static;}
@@ -191,12 +234,120 @@ footer {
             position: static;
             box-shadow: 0 0px 0px;
             height: auto;
-            font-size: 1.4em;
+            font-size: 20px;
             width: auto;}
     
         nav ul { height: 100%;}
     
         nav li {display: inline;
             padding: 1.2em 0;}
-
     }
+
+    @media (max-width:757px) and (min-width:390px){
+
+#logo {width:113px;
+height:45px;
+top:7px;
+left:43px;}
+
+#pic1{
+max-width:225px;
+height:auto;}
+
+.pic1 {
+display:flex;
+justify-content: left;
+align-items: center;}
+
+#pic2{
+max-width:225px;
+height:auto;}
+
+.pic2 {
+display:flex;
+justify-content: center;
+align-items:center;}
+
+#pic3{
+max-width:225px;
+height:auto;}
+
+.pic3 {
+    display:flex;
+    justify-content: right;
+    align-items: center;}
+
+    #pic4 {max-width: 650px;
+    height:430px;}
+
+    .pic4{display:flex;
+        justify-content: center;
+        align-items: center;}
+    }
+
+@media (max-width:390px) {
+
+    #logo {width:113px;
+    height:45px;
+    top:7px;
+    left:21px;}
+
+    h1 {font-size: 32px;
+        line-height: 37.5px;
+    text-align: center;}
+
+    .object1{grid-area:1/1/1/4;
+        display:flex;
+        flex-direction: column;
+        align-items: center;}
+
+    .pic1 {grid-area: 2/1/3/4;
+    display:flex;
+    flex-direction: column;
+    align-items: center;}
+
+    .pic2 {grid-area:4/1/5/4;
+        display:flex;
+        flex-direction: column;
+        align-items: center;}
+
+    .pic3 {grid-area:6/1/7/4;
+        display:flex;
+        flex-direction: column;
+        align-items: center;}
+        
+    #pic1 {max-width:200px;
+    height:auto;}
+    #pic2 {max-width:200px;
+    height:auto;}
+    #pic3 {max-width:200px;
+    height:auto;}
+
+.backgroundimage {grid-area:8/1/9/4;
+    height:360px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;}
+
+.backgroundtext {text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+padding-left: 2%;
+padding-right: 2%;}
+
+.button {max-width:174px;
+height:auto;
+text-align: center;
+font-size: 24px;
+line-height: 70px;}
+
+.pic4{grid-area: 10/1/11/4; 
+    display:flex;
+    flex-direction: column;
+    align-items: center;}
+
+#pic4 {max-width:315px;
+height:auto;}
+
+.object2 {grid-area:12/1/13/4;}
+}

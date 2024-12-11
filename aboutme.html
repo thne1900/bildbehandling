@@ -1,40 +1,77 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset=utf-8 />
-    <title>Min webbplats</title>
+<!DOCTYPE html><!--HTML-document-->
+<html lang="sv"><!--swedish langues-->
+<head><!--in the head element infomration and links have been placed.-->
+    <meta charset=utf-8>
+    <title>Min webbplats</title><!--titel of the website-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="CSS/aboutme.css" />
-    <link rel="favicon" href="images/favicon.ico" type="image/ico">
-    <link rel="favicon" href="images/favicon.png" typ="image/png">
-    <style>
+    <link rel="stylesheet" type="text/css" href="CSS/aboutme.css"><!--link to the page's css document-->
+    <link rel="icon" href="images/favicon.ico" type="image/ico"><!--Link to the favicons-->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>/*Imported font from Google font*/
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
         </style>
 </head>
- 
-<div class="top">
-  <a href="index.html"><img src="images/logo.svg" id="logo" alt="logga föreställande: vit stjärna med text, Tess, inuti på grön bakgrundsfärg" />
-<ul class="menu">
-<li><a href="index.html">STARTSIDA</a></li>
-<li><a href="aboutme.html">OM MIG</a></li>
-<li><a href="pictures.html">BILDBEHANDLING</a></li>
-</ul>
-</div>
-
-<div class="pic.header">
-    <img src="images/header.jpg" alt="två svarta läroböcker" id="header"/>
+ <body>
+    <header>
+        <!--the website's logo, linked to the home page-->
+        <a href="index.html"><img src="images/logo.svg" id="logo" alt="logga föreställande: vit stjärna med texten,: Tess, inuti på grön bakgrundsfärg" ></a>
+            <div class="menu.resp"><!--Class containing menu navigation-->
+                 <button class="menu-btn open" id="open-menu"><!--menu button to drop down the menu-->
+                    <span class="menu-icon"><!--designing the appearance of the menu-->
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                    </span>
+                    <span class="menu-text">MENY</span><!--text visible for menu-->
+                </button>
+                <nav id="nav-menu"><!--navigation menu-->
+                    <button class="menu-btn close" id="close-menu"><!--Button to close the menu-->
+                        <span class="menu-icon">
+                            <span class="bars cross1"></span>
+                            <span class="bars cross2"></span>
+                        </span>
+                        <span class="menu-text">STÄNG MENY</span><!--text that appears to close-->
+                    </button>
+                    <ul><!--an unordered list containing the menu choices-->
+            <li><a href="index.html">STARTSIDA</a></li><!--The menu selections with links to the respective subpages-->
+            <li><a href="aboutme.html">OM MIG</a></li>
+            <li><a href="pictures.html">BILDBEHANDLING</a></li>
+           </ul>
+             </nav>
+             <script>//javascript for functions for menu navigation.
+             //Variables to access the respective id:
+                let openBtn = document.getElementById("open-menu");
+                let closeBtn = document.getElementById("close-menu");
+                //added event listeners on the elements
+                openBtn.addEventListener('click', toggleMenu);
+                closeBtn.addEventListener('click', toggleMenu);
+                //Function that tells what the menu should do when it is hidden or visible.
+                function toggleMenu() {
+                    let navMenuEl = document.getElementById("nav-menu");
+                    let style = window.getComputedStyle(navMenuEl);
+                    if(style.display === "none") {
+                        navMenuEl.style.display = "block";
+                    } else {
+                        navMenuEl.style.display = "none";
+                    }
+                }
+            </script>
+            </div>
+        </header>
+<div class="pic.header"><!--class for the page's header image-->
+    <img src="images/header.jpg" alt="två svarta läroböcker" id="header"><!--img element for header images-->
     </div>
-
+<!--class for object, contains the main header-->
     <div class="object1">
         <h1>Om mig</h1>
         </div>
-
+<!--class, grid-container to be able to place the elements in the css document.-->
 <div class="grid-container">
-    
+<!--class, containing an image that is inserted.-->
 <div class="pic1">
-    <img src="images/portratt.png" alt="porträtt av Therese" id="portrait"/>
+    <img src="images/portratt.png" alt="porträtt av Therese" id="portrait">
     </div> 
-
+<!--class, containing a subheading and a piece of text,-->
 <div class="object2">
 <h2>Therese Nevander</h2>
 <div class="textobject2">
@@ -46,7 +83,7 @@
 </p>
 </div>
 </div>
-
+<!--class, containing a subheading and a piece of text,-->
 <div class="object3">
 <h2>Om uppgiften</h2>
 <div class="textobject3">
@@ -57,8 +94,7 @@
 </p>
 </div>
 </div>
-
-
+<!--class, containing the footer-->
 <div class="object4">
 <footer> Laborationsuppgift för kursen DT200G, Grafisk design för webb.
     <br>
@@ -66,4 +102,5 @@
 </footer>
 </div>
 </div>
+</body>
 </html>

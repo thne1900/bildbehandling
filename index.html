@@ -1,60 +1,54 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset=utf-8 />
-    <title>Min Bildbehandling</title>
+<!DOCTYPE html><!--HTML-document-->
+<html lang="sv"><!--swedish langues-->
+<head><!--in the head element infomration and links have been placed.-->
+    <meta charset=utf-8>
+    <title>Min Bildbehandling</title> <!--titel of the website-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="CSS/index.css" />
-
-    <link rel="favicon" href="images/favicon.ico" type="image/ico"> 
-    <link rel="favicon" href="images/favicon.png" typ="image/png">
-
-    <style> /*Importerat typsnitt från Google-font*/
+    <link rel="stylesheet" type="text/css" href="CSS/index.css"><!--link to the page's css document-->
+    <link rel="icon" href="images/favicon.ico" type="image/ico"><!--Link to the favicons-->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style> /*Imported font from Google font*/
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     </style>
 </head>
 <body>
 <header>
-    <a href="index.html"><img src="images/logo.svg" id="logo" alt="logga föreställande: vit stjärna med texten,: Tess, inuti på grön bakgrundsfärg" />
-        
-        <div class="menu.resp">
-            
-             <button class="menu-btn open" id="open-menu">
-                <span class="menu-icon">
+    <!--the website's logo, linked to the home page-->
+    <a href="index.html"><img src="images/logo.svg" id="logo" alt="logga föreställande: vit stjärna med texten,: Tess, inuti på grön bakgrundsfärg"></a>
+        <div class="menu.resp"><!--Class containing menu navigation-->
+             <button class="menu-btn open" id="open-menu"><!--menu button to drop down the menu-->
+                <span class="menu-icon"><!--designing the appearance of the menu-->
                     <span class="bars"></span>
                     <span class="bars"></span>
                     <span class="bars"></span>
                 </span>
-                <span class="menu-text">MENY</span>
+                <span class="menu-text">MENY</span><!--text visible for menu-->
             </button>
-            
-            <nav id="nav-menu">
-                
-                <button class="menu-btn close" id="close-menu">
+            <nav id="nav-menu"><!--navigation menu-->
+                <button class="menu-btn close" id="close-menu"><!--Button to close the menu-->
                     <span class="menu-icon">
                         <span class="bars cross1"></span>
                         <span class="bars cross2"></span>
                     </span>
-                    <span class="menu-text">STÄNG</span>
+                    <span class="menu-text">STÄNG MENY</span><!--text that appears to close-->
                 </button>
-                <ul>
-        <li><a href="index.html">STARTSIDA</a></li>
+                <ul><!--an unordered list containing the menu choices-->
+        <li><a href="index.html">STARTSIDA</a></li><!--The menu selections with links to the respective subpages-->
         <li><a href="aboutme.html">OM MIG</a></li>
         <li><a href="pictures.html">BILDBEHANDLING</a></li>
        </ul>
          </nav>
-         <script>
+         <script>//javascript for functions for menu navigation.
+         //Variables to access the respective id:
             let openBtn = document.getElementById("open-menu");
             let closeBtn = document.getElementById("close-menu");
-            
+            //added event listeners on the elements
             openBtn.addEventListener('click', toggleMenu);
             closeBtn.addEventListener('click', toggleMenu);
-            
+            //Function that tells what the menu should do when it is hidden or visible.
             function toggleMenu() {
                 let navMenuEl = document.getElementById("nav-menu");
-            
                 let style = window.getComputedStyle(navMenuEl);
-            
                 if(style.display === "none") {
                     navMenuEl.style.display = "block";
                 } else {
@@ -62,49 +56,47 @@
                 }
             }
         </script>
-
         </div>
     </header>
- 
-
-    <div class="pic.header">
-    <img src="images/header.jpg" alt="två svarta läroböcker" id="header"/>
+    <div class="pic.header"><!--class for the page's header image-->
+    <img src="images/header.jpg" alt="två svarta läroböcker" id="header"><!--img element for header images-->
     </div>
-
-        <div class="grid-container">
-
-        <div class="object1">
+        <div class="grid-container"><!--class, grid-container to be able to place the elements in the css document.-->
+        <div class="object1"><!--class, containing the main header.-->
         <h1><b>Senaste produkterna</b></h1>
-</div>
+    </div>
+<!--Created classes for the page's images and inserted them.-->
 <div class="pic1">
-<img src="images/frilaggning01.png" alt="blå penna med skuggning" id="pic1"/>
+<img src="images/frilaggning01.png" alt="blå penna med skuggning" id="pic1">
 </div>
 <div class="pic2">
-<img src="images/frilaggning02.png" alt="lila penna med skuggning" id="pic2"/>
+<img src="images/frilaggning02.png" alt="lila penna med skuggning" id="pic2">
 </div>
 <div class="pic3">
-<img src="images/frilaggning03.png" alt="rosa penna med skuggning" id="pic3"/>
+<img src="images/frilaggning03.png" alt="rosa penna med skuggning" id="pic3">
 </div>
-
+<!--Created a class for the background image and made text posts.-->
 <div class="backgroundimage" id="ground">
     <div class="backgroundtext">
         <p>Webbutvecklingsprogrammet
             <br>
             Mittuniversitetet
         </p>
+        <!--Created a button that, when pressed, takes a visitor to the school's home page.-->
         <button class="button" id="click.button" type="submit">Sök här</button>
     </div>
 </div>
+<!--inserted javascript for the function to link to the school's page when the button is clicked.-->
 <script>
-document.getElementById("click.button").addEventListener("click", function(){
+document.getElementById("click.button").addEventListener("click", function(){ //code that reaches the button, sets an event listener, when clicked, takes a visitor to the school's page.
     window.location.href="https://www.miun.se/";
 });
 </script>
-
+<!--class for the image and inserted it-->
 <div class="pic4">
-<img src="images/reklam_banner.gif" alt="tre pennor med färgerna blå, rosa och lila" id="pic4"/>
+<img src="images/reklam_banner.gif" alt="tre pennor med färgerna blå, rosa och lila" id="pic4">
 </div>
-
+<!--class for the footer-->
 <div class="object2">
         <footer> Laborationsuppgift för kursen DT200G, Grafisk design för webb.
             <br>

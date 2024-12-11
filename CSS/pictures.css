@@ -1,92 +1,362 @@
-body {
+body {/*Sets properties on the body, with background color, font-family, line height and width.*/
     background-color:#F2F5EA;
     font-family:"Roboto", sans-serif;
     color: #2C363F;
     line-height: 1.5em;
     max-width: 1512px;
-    width:100%;
-}
+    width:100%;}
 
-#logo {
+#logo {/*sets style around the website's logo, with position, placement and padding.*/
     position:absolute;
     width: 174px;
     height: 70px;
     top:5px;
     left: 156px;
-    padding:1%;
-}
+    padding:1%;}
 
-    .top {background-color:#BBC7A4;}
+#header {/*Header has been given width and height*/
+    max-width:1512px;
+    width:100%;
+    height: auto;
+    max-height: 540px;}
 
-    #header {max-width:1512px;
-        width:100%;
-        height: 540px;}
+header {/*the header element has been given color, sizes, placement, margin and padding.*/
+    background-color:#BBC7A4;
+    max-width: 1512px;
+    height: 80px;
+    box-shadow:0px 4px 4px 0px rgba(0,0,0,1);
+    margin:0;
+    position:relative;
+    padding:0 1em;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;}
 
-.menu {display:flex;
-    justify-content:right;
-}
-.menu >li{
-    list-style-type: none; margin: 1%; margin-right: 3%; padding: 1%; font-size: 1.2em; font-weight: bold;}
-.menu >li {
-    display:inline-block; position: relative;}
-a:link {
-    color: #2C363F; text-decoration:none;}
-a:visited {
-    color: #2C363F;}
-a:hover {
-    background-color: rgb(82, 163, 225);}
-a:active {
-    color:#2C363F;
-}
-.grid-container {
+nav { /*the nav element has been given color, sizes of text, width and height and line-height as well as how it should be displayed.*/
+    background-color: #BBC7A4;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
+    font-weight: 700;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    display: none;
+    line-height: 23.44px;}
+
+    nav ul {/*The nav element's unsorted list has been styled in sizes, placement, margin and padding, line-height.*/
+        width: 100%;
+        list-style-type: none;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;}
+
+    nav li {/*The nav element's object has been sized and padded.*/
+        padding: 0.8em 0;
+        width: 100%;}
+    
+    nav a {/*The links of the nav element have been given color, design and padding.*/
+        color: black;
+        text-decoration: none;
+        padding: 0 1em;}
+    
+    nav li:hover {/*nav element links hover, get background color and a "pointing finger".*/
+        background-color: rgb(83, 135, 191);
+        cursor: pointer;}
+
+    .menu.btn {/*the menu button gets placement, padding, background color, frame, a "pointing finger" and sizes.*/
+        display: flex;
+        align-items: center;
+        padding: 8px 15px;
+        background-color: #BBC7A4;
+        border: black solid 4px;
+        cursor: pointer;
+        width:120px;
+        height:43px;
+    }
+    
+    .open { margin: 0 1em;}/*the open button has been given margin.*/
+    
+    .menu-btn:hover {/*menu button on hover gets background color and shadow.*/
+        background-color:#BBC7A4 ;
+        box-shadow: 0 0px 2px rgba(0, 0, 0, 0.421);}
+    
+    .menu-icon {margin-right: 5px;}/*the menu icon gets the right margin.*/
+    
+    .bars {/*The lines in the menu get design, size, background color and margin.*/
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color:black;
+        margin: 5px 0;}
+    
+    .menu-text {/*the menu text has been given size, design, line height and color.*/
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 26.95px;
+        color: black;}
+    
+    .close { /*the button to close has been given margin and padding.*/ 
+        margin: 1em 1.5em;
+        padding: 10px 15px;}
+    
+    .cross1 {/*the cross on the close button gets size, design, position and placement.*/
+        width: 25px;
+        transform: rotate(45deg);
+        position: relative;
+        top: 5px;}
+    
+    .cross2 {/*the cross on the close button gets size, design, position and placement.*/
+        width: 25px;
+        transform: rotate(135deg);
+        position: relative;
+        top: -3px;}
+    
+.grid-container {/*Design of a grid container for placements around rows and columns.*/
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns:repeat(3, 1fr);
-    /*grid-row-gap: 2%;*/}
+    grid-template-columns:repeat(2, 1fr);}
 
-    .pic.header {grid-row-start: 1;
+    .object1 {/*object1 has been placed with grid.*/
+        grid-row-start: 1;
         grid-column-start: 1;
-        grid-row-end: 2;
-        grid-column-end: 4;}
-
-    .object1 {grid-row-start: 1;
-        grid-column-start: 2;
         grid-row-end: 1;
-        grid-column-end: 2;}
+        grid-column-end: 3;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-    .object2 {grid-area:2/2/2/2;}
-    .pic1 {grid-area:3/1/4/1;}
-    #pic1 {width: 550px;
-    height: 366.71px;}
-    .pic2 {grid-area:3/3/4/3;}
-    #pic2 {width: 550px;
-    height: 366.71px;}
+    .object2 {/*object2 has been placed with grid area.*/
+        grid-area:2/1/2/3;
+        display:flex;
+        justify-content: center;
+        align-items: center;}
 
-    .object3 {grid-area:4/2/4/2;}
-    .pic3 {grid-area: 5/1/6/1;}
-    #pic3 {width: 550px;
-        height: 387px;}
-    .pic4 {grid-area: 5/3/6/3;}
-    #pic4 {width:550px;
-    height: 387px;}
+    .pic1 {grid-area:3/1/4/1;
+        display:flex;
+        justify-content: center;
+        align-items: center;}/*pic1 has been placed with grid area.*/
 
-    .object4{ grid-area:6/1/7/4;}
+    #pic1 {/*image 1 has been given width and height.*/
+        max-width: 550px;
+        width:100%;
+        max-height: 366.71px;
+        height: auto;}
 
-h1 {
+    .pic2 {/*pic2 has been placed with grid area.*/
+        grid-area:3/2/4/2;
+        display:flex;
+        justify-content: center;
+        align-items: center;}
+
+    #pic2 {/*image 2 has been given width and height.*/
+        max-width: 550px;
+        width:100%;
+        height: auto;
+        max-height: 366.71px;}
+
+    .object3 {/*object3 has been placed with grid area.*/
+        grid-area:4/1/4/3;
+        display:flex;
+        justify-content: center;
+        align-items: center;}
+
+    .pic3 {/*pic3 has been placed with grid area.*/
+        grid-area: 5/1/6/1;
+        display:flex;
+        justify-content: center;
+        align-items: center;}
+
+    #pic3 {/*image 3 has been given width and height.*/
+        max-width: 550px;
+        width:100%;
+        height:auto;
+        max-height: 387px;
+        padding-bottom: 20px;}
+
+    .pic4 {/*object2 has been placed with grid area.*/
+        grid-area: 5/2/6/2;
+        display:flex;
+        justify-content: center;
+        align-items: center;}
+
+    #pic4 {/*image 4 has been given width and height.*/
+        max-width:550px;
+        width:100%;
+        height:auto;
+        max-height: 387px;
+    padding-bottom: 20px;}
+
+    .object4{ grid-area:7/1/8/3;}/*object4 has been placed with grid area.*/
+
+h1 {/*Sets the style of the Header, with text size, color and line height.*/
     font-size: 42px;
     color:#E75A7C;
-    }
-h2 {font-size: 36px;
+    font-weight: 700;
+    line-height: 49.22px;}
+
+h2 {/*Sets the style of the subheadings, with text size, color and line height.*/
+    font-size: 36px;
     color:#E75A7C;
-}
+    font-weight: 700;
+    line-height: 42.19px;}
 
-
-
-
-
-footer {
+footer {/*the footer gets color, size of text, position, line height and padding.*/
     background-color: #BBC7A4;
     color: #2C363F;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
     padding: 2%;
     text-align: center;}
+
+    @media only screen and (min-width: 757px){/*Media rule, where the screen size of 757px controls what should be shown or not.*/
+
+        .menu-btn {display: none;}
+        #open-menu {display: none !important;}
+        header {position: static;}
+        nav {display: block !important;
+            position: static;
+            box-shadow: 0 0px 0px;
+            height: auto;
+            font-size: 1.4em;
+            width: auto;}
+    
+        nav ul { height: 100%;}
+    
+        nav li {display: inline;
+            padding: 1.2em 0;}
+    
+    }
+
+    @media (max-width:757px) and (min-width:390px){
+
+        #logo {width:113px;
+        height:45px;
+        top:7px;
+        left:43px;}
+
+        .object1 {grid-area:1/1/1/3;
+            display:flex;
+            justify-content: center;
+        align-items: center;}
+
+        .object2 {grid-area:2/1/2/3;
+            display:flex;
+            justify-content: center;
+        align-items: center;}
+
+        .pic1 {grid-area:3/1/4/3;
+        display:flex;
+        justify-content: center;
+        align-items: center;}
+
+        #pic1 {max-width:550px;
+        height:366.71px;
+    padding-bottom:20px;}
+
+        .pic2 {grid-area:5/1/6/3;
+            display:flex;
+            justify-content: center;
+        align-items: center;}
+
+        #pic2 {max-width:550px;
+            height:366.71px;
+        padding-bottom: 20px;}
+
+        .object3 {grid-area:7/1/8/3;
+            display:flex;
+            justify-content: center;
+            align-items: center;}
+
+        .pic3 {grid-area:9/1/10/3;
+            display:flex;
+            justify-content: center;
+        align-items: center;}
+
+        #pic3 {max-width: 550px;
+        height:387px;
+    padding-bottom:20px;}
+
+        .pic4 {grid-area:11/1/12/3;
+            display:flex;
+            justify-content: center;
+        align-items: center;}
+
+        #pic4{max-width: 550px;
+            height:387px;
+    padding-bottom:40px;}
+
+            .object4{grid-area:13/1/14/3;}
+
+        }
+            @media (max-width:390px) {
+
+                #logo {width:113px;
+                height:45px;
+                top:7px;
+                left:21px;}
+
+                h1 {font-size: 32px;}
+
+                h2{font-size: 26px;}
+
+                .object1 {grid-area:1/1/1/3; 
+                    display:flex;
+                   justify-content: center;
+                align-items: center;}
+
+                .object2 {grid-area:2/1/2/3;  
+                    display:flex;
+                   justify-content: center;
+                align-items: center;}
+
+                .pic1 {grid-area:3/1/4/3;  
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;}
+
+                #pic1 {max-width:315px;
+                height: 210.03px;
+            padding-bottom: 20px;}
+
+                .pic2 {grid-area:5/1/6/3;  
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;}
+
+                #pic2 {max-width:315px;
+                    height: 210.03px;
+                    padding-bottom: 20px;}
+
+                .object3 {grid-area:7/1/8/3;  
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;}
+
+                .pic3 {grid-area:9/1/10/3;  
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;}
+
+                #pic3 {max-width:315px;
+                height: 221.65px;
+                padding-bottom: 20px;}
+
+                .pic4 {grid-area:11/1/12/3;  
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;}
+
+                #pic4 {max-width: 316px;
+                height:222px;
+                padding-bottom: 40px;}
+
+                .object4 {grid-area: 13/1/14/3;}
+
+                }
