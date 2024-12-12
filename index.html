@@ -40,19 +40,19 @@
          </nav>
          <script>//javascript for functions for menu navigation.
          //Variables to access the respective id:
-            let openBtn = document.getElementById("open-menu");
-            let closeBtn = document.getElementById("close-menu");
+            let openButton = document.getElementById("open-menu");
+            let closeButton = document.getElementById("close-menu");
             //added event listeners on the elements
-            openBtn.addEventListener('click', toggleMenu);
-            closeBtn.addEventListener('click', toggleMenu);
+            openButton.addEventListener('click', toggleMenu);
+            closeButton.addEventListener('click', toggleMenu);
             //Function that tells what the menu should do when it is hidden or visible.
             function toggleMenu() {
-                let navMenuEl = document.getElementById("nav-menu");
-                let style = window.getComputedStyle(navMenuEl);
+                let navMenuElement = document.getElementById("nav-menu");
+                let style = window.getComputedStyle(navMenuElement);
                 if(style.display === "none") {
-                    navMenuEl.style.display = "block";
+                    navMenuElement.style.display = "block";
                 } else {
-                    navMenuEl.style.display = "none";
+                    navMenuElement.style.display = "none";
                 }
             }
         </script>

@@ -32,7 +32,7 @@ header {/*the header element has been given color, sizes, placement, margin and 
     justify-content: space-between;
     align-items: center;}
 
-nav {/*the nav element has been given color, sizes of text, width and height and line-height as well as how it should be displayed.*/
+nav {/*the nav element has been given color, sizes of text, width and height and line-height as well how it should be displayed.*/
     background-color: #BBC7A4;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
     font-weight: 700;
@@ -78,8 +78,9 @@ nav {/*the nav element has been given color, sizes of text, width and height and
         width:120px;
         height:43px;}
     
-    .open { /*the open button has been given margin.*/
-        margin: 0 1em;}
+    .open { /*the open button has been given margin and backgroundcolor.*/
+        margin: 0 1em;
+        background-color: #BBC7A4;}
     
     .menu-btn:hover {/*menu button on hover gets background color and shadow.*/
         background-color:#BBC7A4 ;
@@ -100,9 +101,10 @@ nav {/*the nav element has been given color, sizes of text, width and height and
         line-height: 26.95px;
         color: black;}
     
-    .close {/*the button to close has been given margin and padding.*/
+    .close {/*the button to close has been given margin, padding and backgroundcolor.*/
         margin: 1em 1.5em;
-        padding: 10px 15px;}
+        padding: 10px 15px;
+        background-color: #BBC7A4;}
     
     .cross1 {/*the cross on the close button gets size, design, position and placement.*/
         width: 25px;
@@ -184,11 +186,15 @@ h2 {/*the subheadings get size, line height, color and placement of text.*/
             padding: 2%;
             text-align: center;}
 
-        @media only screen and (min-width: 757px){/*Media rule, where the screen size of 757px controls what should be shown or not.*/
+        /*Media rule, breakpoint of 757px, controls what should be shown or not.*/
+        @media only screen and (min-width: 757px){
 
             .menu-btn {display: none;}
+
             #open-menu {display: none !important;}
+
             header {position: static;}
+
             nav {display: block !important;
                 position: static;
                 box-shadow: 0 0px 0px;
@@ -202,14 +208,14 @@ h2 {/*the subheadings get size, line height, color and placement of text.*/
                 padding: 1.2em 0;}
             }
 
+        /*Media rule for break point between 757px and 390px. Where elements get different placements, changes, additions and designs.*/
         @media (max-width:757px) and (min-width:390px){
             #logo {width:113px;
                 height:45px;
                 top:7px;
                 left:43px;}
 
-                .object1 {
-                    display:flex;
+                .object1 {display:flex;
                     justify-content: center;
                     align-items: center;}
 
@@ -236,8 +242,9 @@ padding:10px;}
 padding:10px;}
 .object4 {grid-area:5/1/6/3;}
 
-        }
+}
 
+/*Media rule for break point 390px. Where elements have been placed in a column, changes, additions and design.*/
 @media (max-width:390px){
     #logo {width:113px;
         height:45px;

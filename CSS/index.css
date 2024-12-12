@@ -32,7 +32,7 @@ header {/*the header element has been given color, sizes, placement, margin and 
     justify-content: space-between;
     align-items: center;}
 
-nav { /*the nav element has been given color, sizes of text, width and height and line-height as well as how it should be displayed.*/
+nav { /*the nav element has been given color, sizes of text, width and height and line-height as well how it should be displayed.*/
     background-color: #BBC7A4;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
     font-weight: 700;
@@ -79,8 +79,9 @@ nav { /*the nav element has been given color, sizes of text, width and height an
         height:43px;
     }
     
-    .open {/*the open button has been given margin.*/
-        margin: 0 1em;}
+    .open {/*the open button has been given margin and backgroundcolor.*/
+        margin: 0 1em;
+        background-color: #BBC7A4;}
     
     .menu-btn:hover {/*menu button on hover gets background color and shadow.*/
         background-color:#BBC7A4 ;
@@ -101,9 +102,10 @@ nav { /*the nav element has been given color, sizes of text, width and height an
         line-height: 26.95px;
         color: black;}
     
-    .close {/*the button to close has been given margin and padding.*/ 
+    .close {/*the button to close has been given margin, padding and backgroundcolor.*/ 
         margin: 1em 1.5em;
-        padding: 10px 15px;}
+        padding: 10px 15px;
+        background-color: #BBC7A4;}
     
     .cross1 {/*the cross on the close button gets size, design, position and placement.*/
         width: 25px;
@@ -135,19 +137,19 @@ nav { /*the nav element has been given color, sizes of text, width and height an
     grid-column-end: 2;
     text-align: center;}
 
-.pic1{/*pic1 gets a placement with grid area.*/
+.pic1{/*pic1 gets a placement with grid area and flex.*/
     grid-area:2/2/3/2;
     display: flex;
     justify-content: left;
     align-items: center;}
 
-.pic2{/*pic2 gets a placement with grid area.*/
+.pic2{/*pic2 gets a placement with grid area and flex.*/
     grid-area:2/2/3/2;
     display:flex;
     justify-content: center;
     align-items: center;}
 
-.pic3{/*pic3 gets a placement with grid area.*/
+.pic3{/*pic3 gets a placement with grid area and flex.*/
     grid-area:2/2/3/2;
     display: flex;
     justify-content: right;
@@ -156,17 +158,17 @@ nav { /*the nav element has been given color, sizes of text, width and height an
 #pic1{/*image 1 gets width and height*/
 max-width: 300px;
 width:100%;
-}
+height:auto;}
 
 #pic2{/*image 2 gets width and height*/
 max-width:300px;
 width:100%;
-}
+height:auto;}
 
 #pic3 {/*image 3 gets width and height*/
 max-width:300px;
 width:100%;
-}
+height:auto;}
 
 .backgroundimage {/*The background image gets location, background color and size.*/
     grid-area: 3/1/4/4;
@@ -224,12 +226,14 @@ footer {/*the footer gets color, size of text, position, line height and padding
     padding: 2%;
     text-align: center;}
 
-
-    @media only screen and (min-width: 757px){/*Media rule, where the screen size of 757px controls what should be shown or not.*/
-
+/*Media rule, breakpoint 757px, controls what should be shown or not on the (hamburger)menu.*/
+    @media only screen and (min-width: 757px){
         .menu-btn {display: none;}
+
         #open-menu {display: none !important;}
+
         header {position: static;}
+
         nav {display: block !important;
             position: static;
             box-shadow: 0 0px 0px;
@@ -243,6 +247,7 @@ footer {/*the footer gets color, size of text, position, line height and padding
             padding: 1.2em 0;}
     }
 
+/*Media rule for break point between 757px and 390px. Where elements get different placements, changes, additions and designs.*/
     @media (max-width:757px) and (min-width:390px){
 
 #logo {width:113px;
@@ -285,6 +290,7 @@ height:auto;}
         align-items: center;}
     }
 
+/*Media rule for break point 390px. Where elements have been placed in a column, changes, additions and design.*/
 @media (max-width:390px) {
 
     #logo {width:113px;
@@ -325,6 +331,7 @@ height:auto;}
 
 .backgroundimage {grid-area:8/1/9/4;
     height:360px;
+    width:auto;
     display:flex;
     flex-direction: column;
     align-items: center;}

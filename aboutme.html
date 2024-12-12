@@ -7,9 +7,9 @@
     <link rel="stylesheet" type="text/css" href="CSS/aboutme.css"><!--link to the page's css document-->
     <link rel="icon" href="images/favicon.ico" type="image/ico"><!--Link to the favicons-->
     <link rel="icon" href="images/favicon.png" type="image/png">
-    <style>/*Imported font from Google font*/
+    <style> /*Imported font from Google font*/
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        </style>
+    </style>
 </head>
  <body>
     <header>
@@ -40,19 +40,19 @@
              </nav>
              <script>//javascript for functions for menu navigation.
              //Variables to access the respective id:
-                let openBtn = document.getElementById("open-menu");
-                let closeBtn = document.getElementById("close-menu");
+                let openButton = document.getElementById("open-menu");
+                let closeButton = document.getElementById("close-menu");
                 //added event listeners on the elements
-                openBtn.addEventListener('click', toggleMenu);
-                closeBtn.addEventListener('click', toggleMenu);
+                openButton.addEventListener('click', toggleMenu);
+                closeButton.addEventListener('click', toggleMenu);
                 //Function that tells what the menu should do when it is hidden or visible.
                 function toggleMenu() {
-                    let navMenuEl = document.getElementById("nav-menu");
-                    let style = window.getComputedStyle(navMenuEl);
+                    let navMenuElement = document.getElementById("nav-menu");
+                    let style = window.getComputedStyle(navMenuElement);
                     if(style.display === "none") {
-                        navMenuEl.style.display = "block";
+                        navMenuElement.style.display = "block";
                     } else {
-                        navMenuEl.style.display = "none";
+                        navMenuElement.style.display = "none";
                     }
                 }
             </script>
